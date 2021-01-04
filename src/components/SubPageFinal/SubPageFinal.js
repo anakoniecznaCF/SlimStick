@@ -15,7 +15,7 @@ import blik from './Assets/partner-blik.jpg';
 import {
   PageWrapper,
   PageHeader,
-  SubHeader,
+  // SubHeader,
   ContentImageWrapper,
   ImageWrapper,
   PricesWrapper,
@@ -61,9 +61,9 @@ const SubPageFinal = () => {
           <UserInfo>{ user.postCode ? user.postCode : '--' }</UserInfo>
         </UserInfoWrapper>
         <PricesWrapper>
-          <SubHeader as={PageHeader}>
+          {/* <SubHeader as={PageHeader}>
             Dlaczego jest to takie opłacalne?
-          </SubHeader>
+          </SubHeader> */}
           <PriceItem>
             <PriceContentMain>
               <strong>Szczegóły dotyczące zamówienia:</strong>

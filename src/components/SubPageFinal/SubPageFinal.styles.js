@@ -1,5 +1,9 @@
 import styled from 'styled-components';
-import { FlexWrapper, ImgWrapper, ContainerWrapper } from './style/StyledComponents/index';
+import {
+  FlexWrapper,
+  ImgWrapper,
+  ContainerWrapper,
+} from './style/StyledComponents/index';
 import parcel from './Assets/parcel.png';
 
 const PageWrapper = styled(ContainerWrapper)`
@@ -20,7 +24,7 @@ const PageHeader = styled.h1`
   font-size: 32px;
   font-weight: bold;
   line-height: 40px;
-  color: #034C9B;
+  color: #034c9b;
 
   &::before {
     content: '';
@@ -45,31 +49,31 @@ const SubHeader = styled.h3`
     width: 0;
     height: 0;
   }
-`
+`;
 
 const ContentImageWrapper = styled(FlexWrapper)`
   flex-wrap: wrap;
   justify-content: center;
   margin-top: 20px;
   padding-top: 20px;
-  border-top: 1px solid #41348B;
+  border-top: 1px solid #41348b;
 
-  @media only screen and (min-width: 1104px){
+  @media only screen and (min-width: 1104px) {
     align-items: flex-start;
     justify-content: space-around;
     padding-top: 40px;
   }
-`
+`;
 
 const ImageWrapper = styled(ImgWrapper)`
   margin-bottom: 20px;
   width: 227px;
   height: 198px;
 
-  @media only screen and (min-width: 1104px){
+  @media only screen and (min-width: 1104px) {
     margin-bottom: 0;
   }
-`
+`;
 
 const PricesWrapper = styled.div`
   width: 100%;
@@ -77,7 +81,7 @@ const PricesWrapper = styled.div`
   @media only screen and (min-width: 1104px) {
     max-width: 560px;
   }
-`
+`;
 
 const PriceItem = styled.div`
   display: flex;
@@ -85,43 +89,43 @@ const PriceItem = styled.div`
   padding: 8px 18px;
   width: 100%;
   font-family: 'Poppins';
-  font-size: 18px; 
-  background-color: #F0B21C;
+  font-size: 18px;
+  background-color: #f0b21c;
   color: #555555;
-`
+`;
 
 const PriceItemLight = styled.div`
-  border-bottom: 1px solid #034C9B;
+  border-bottom: 1px solid #034c9b;
   color: #555555;
   background-color: white;
-`
+`;
 
 const PriceItemDark = styled.div`
   color: #555555;
   background-color: white;
-`
+`;
 
 const PriceContentMain = styled.p`
   min-width: 130px;
-  font-size: 14px; 
+  font-size: 14px;
+  color: #034c9b;
 
   & > strong {
-    color: #034C9B;
     & > span {
-      color: #F0B21C;
+      color: #f0b21c;
     }
   }
 
   @media only screen and (min-width: 375px) {
     min-width: 180px;
-    font-size: 18px; 
+    font-size: 18px;
   }
 
   @media only screen and (min-width: 620px) {
     min-width: 349px;
-    font-size: 18px; 
+    font-size: 18px;
   }
-`
+`;
 
 const PriceContentNumber = styled.p`
   display: flex;
@@ -130,44 +134,44 @@ const PriceContentNumber = styled.p`
   text-align: center;
   min-width: 52px;
   font-size: 14px;
-  color: #034C9B;
+  color: #034c9b;
 
   & > span {
     color: #555555;
   }
 
   @media only screen and (min-width: 620px) {
-    font-size: 18px; 
+    font-size: 18px;
     min-width: 100px;
   }
-`
+`;
 
 const ImageHeader = styled.p`
   margin-bottom: 10px;
   line-height: 1.5;
   text-transform: uppercase;
-  color: #034C9B;
+  color: #034c9b;
 
   & > span {
     font-size: 16px;
     text-transform: lowercase;
   }
-`
+`;
 
 const PriceContentCost = styled.p`
   min-width: 52px;
   font-size: 14px;
-  color: #034C9B;
+  color: #034c9b;
 
   & > span {
     color: #555555;
   }
 
   @media only screen and (min-width: 620px) {
-    font-size: 18px; 
+    font-size: 18px;
     min-width: 100px;
   }
-`
+`;
 
 const DeliveryIconsWrapper = styled(FlexWrapper)`
   width: 100%;
@@ -190,45 +194,45 @@ const DeliveryIconsWrapper = styled(FlexWrapper)`
       height: 68px;
     }
   }
-`
+`;
 
 const UserInfoWrapper = styled.div`
   margin-bottom: 20px;
   width: 100%;
 
-  @media only screen and (min-width: 1104px){
-    margin-top: 60px;
+  @media only screen and (min-width: 1104px) {
+    /* margin-top: 60px; */
     margin-bottom: 0;
     width: 400px;
   }
-`
+`;
 
 const UserInfoHeader = styled.p`
   padding: 16px 18px;
-  color: #034C9B;
-`
+  color: #034c9b;
+`;
 
 const UserInfo = styled.p`
   margin-top: 10px;
   padding-left: 18px;
-  color: #034C9B;
-`
+  color: #034c9b;
+`;
 
 const DeliveryWarranty = styled.p`
   margin-top: 24px;
   width: 100%;
-  color: #034C9B;
+  /* color: #034C9B; */
 
   @media only screen and (min-width: 576px) {
     margin-top: 48px;
   }
-`
+`;
 
 const SignWrapper = styled(FlexWrapper)`
   flex-direction: column;
   align-items: flex-end;
   margin-top: 18px;
-`
+`;
 
 const SignImg = styled(ImgWrapper)`
   width: 176px;
@@ -237,17 +241,17 @@ const SignImg = styled(ImgWrapper)`
     width: 232px;
     height: 91px;
   }
-`
+`;
 const SignInfo = styled.p`
   max-width: 150px;
   text-align: end;
-  color: #034C9B;
+  /* color: #034C9B; */
 
   @media only screen and (min-width: 576px) {
     max-width: 163px;
     font-size: 18px;
   }
-`
+`;
 
 export {
   PageWrapper,
@@ -270,5 +274,5 @@ export {
   DeliveryWarranty,
   SignWrapper,
   SignImg,
-  SignInfo
+  SignInfo,
 };

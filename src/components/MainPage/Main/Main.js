@@ -13,12 +13,10 @@ const Main = () => {
   const [isPopUpOpen, setPopUpOpen] = useState(false);
   const [popUpOpenScroll, setPopUpOpenScroll] = useState(false);
   const [isFormFilled, setFormFilled] = useState(false);
+  const [timerInit, setTimer] = useState(false);
   const footerEl = useRef(null);
 
   const openPopUpScroll = () => {
-    if (popUpOpenScroll) {
-      return;
-    }
     setPopUpOpenScroll(true);
     setPopUpOpen(true);
   };
@@ -27,23 +25,16 @@ const Main = () => {
     let initPopUpAfterThirtySec;
     let footer = footerEl.current;
 
-    if(initPopUpAfterThirtySec) {
+    if(isFormFilled) {
       clearTimeout(initPopUpAfterThirtySec);
-      initPopUpAfterThirtySec = null;
     }
 
     const popUpCountDown = () => {
-      if (footer.getBoundingClientRect().top < 800 && !isFormFilled && !initPopUpAfterThirtySec) {
+      if (footer.getBoundingClientRect().top < 800 && !isFormFilled && !popUpOpenScroll && !timerInit) {
         initPopUpAfterThirtySec = setTimeout(() => {
           openPopUpScroll();
-        }, 30000);
-      } else {
-        clearTimeout(initPopUpAfterThirtySec);
-        initPopUpAfterThirtySec = null;
-      }
-
-      if (popUpOpenScroll) {
-        window.removeEventListener('scroll', popUpCountDown);
+        }, 10000);
+        setTimer(true);
       }
     };
 
@@ -53,7 +44,7 @@ const Main = () => {
       clearTimeout(initPopUpAfterThirtySec);
       window.removeEventListener('scroll', popUpCountDown);
     };
-  });
+  }, [popUpOpenScroll, isFormFilled, timerInit]);
 
   return (
     <MainSection>
